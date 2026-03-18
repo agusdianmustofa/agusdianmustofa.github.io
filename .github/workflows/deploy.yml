@@ -34,6 +34,7 @@ jobs:
         run: |
           echo "NEXT_PUBLIC_API_URL=${{ vars.NEXT_PUBLIC_API_URL }}" > .env.production
           npm run build
+          npm run export
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
