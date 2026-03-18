@@ -25,7 +25,7 @@ jobs:
 
       - name: Build & Export
         run: |
-          echo "NEXT_PUBLIC_API_URL=${{ vars.NEXT_PUBLIC_API_URL }}"
+          echo "NEXT_PUBLIC_API_URL=${{ vars.NEXT_PUBLIC_API_URL }}" > .env.production
           npm run build
 
       - name: Deploy to gh-pages
